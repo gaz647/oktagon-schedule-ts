@@ -13,12 +13,17 @@ const formatYYYMMDD = "yyyy/MM/dd";
 import { db } from "../firebase/config";
 import { collection, query, getDocs } from "firebase/firestore";
 
-type Result = {
-  id: 
-}
+type OneEvent = {
+  date: string;
+  description: string;
+  id: string;
+  image: string;
+  title: string;
+  url: string;
+};
 
-const Calendar: React.FC = (props) => {
-  const [databaseData, setDatabaseData] = useState([]);
+const Calendar: React.FC = () => {
+  const [databaseData, setDatabaseData] = useState<OneEvent[]>([]);
 
   useEffect(() => {
     async function fetchData() {
@@ -26,9 +31,17 @@ const Calendar: React.FC = (props) => {
         const q = query(collection(db, "events"));
         const querySnapshot = await getDocs(q);
 
-        let result:  = [];
+        const result: OneEvent[] = [];
+
         querySnapshot.forEach((oneEvent) => {
-          result.push({ id: oneEvent.id, ...oneEvent.data() });
+          result.push({
+            date: oneEvent.data().date,
+            description: oneEvent.data().description,
+            id: oneEvent.id,
+            image: oneEvent.data().image,
+            title: oneEvent.data().title,
+            url: oneEvent.data().url,
+          });
         });
         setDatabaseData(result);
       } catch {
@@ -79,7 +92,7 @@ const Calendar: React.FC = (props) => {
     setShowDayPreview(false);
   };
 
-  const [dayPreviewDate, setDayPreviewDate] = useState(null);
+  const [dayPreviewDate, setDayPreviewDate] = useState<string>("");
 
   const handleClickMinus = () => {
     clickAudio.play();
@@ -132,7 +145,7 @@ const Calendar: React.FC = (props) => {
                       setShowDayPreview(true);
                       setDayPreviewDate(dateFns.format(date, formatYYYMMDD));
                     }
-                  : null
+                  : undefined
               }
             >
               <div

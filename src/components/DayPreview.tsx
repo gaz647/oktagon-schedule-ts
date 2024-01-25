@@ -1,15 +1,29 @@
 import "./DayPreview.css";
 import { v4 as uuidv4 } from "uuid";
-import * as dateFns from "date-fns";
-import React from "react";
+import { format } from "date-fns";
 
 const formatYYYMMDD = "yyyy-MM-dd";
 
-export default function DayPreview(props) {
+type OneEvent = {
+  date: string;
+  description: string;
+  id: string;
+  image: string;
+  title: string;
+  url: string;
+};
+
+interface PropsInterface {
+  databaseData: OneEvent[];
+  dayPreviewDate: string;
+  handleCloseDayPreview: () => void;
+}
+
+const DayPreview: React.FC<PropsInterface> = (props) => {
   const filteredData = props.databaseData.filter(
     (item) =>
-      dateFns.format(new Date(item.date), formatYYYMMDD) ===
-      dateFns.format(new Date(props.dayPreviewDate), formatYYYMMDD)
+      format(new Date(item.date), formatYYYMMDD) ===
+      format(new Date(props.dayPreviewDate), formatYYYMMDD)
   );
 
   return (
@@ -48,4 +62,6 @@ export default function DayPreview(props) {
       </div>
     </div>
   );
-}
+};
+
+export default DayPreview;
