@@ -1,0 +1,111 @@
+.calendar-body {
+  width: 100%;
+}
+
+.month-changer {
+  width: 22rem;
+  max-width: 80%;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 2px gray;
+  padding: 0.5rem;
+  border-radius: 50px;
+}
+
+.month-changer h1 {
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.month-changer button {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  color: black;
+}
+
+.month-changer button:hover {
+  background-color: #fed300;
+  transform: scale(1.1);
+}
+
+.days-of-week {
+  background-color: rgb(238, 27, 27);
+  color: whitesmoke;
+  font-weight: bold;
+  height: 2rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  margin: 0 auto;
+  padding: 0.5rem;
+  max-width: 1000px;
+}
+
+.dates {
+  height: 4.5rem;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  box-shadow: 0 0 5px rgb(151, 147, 147);
+  transition: all linear 200ms;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.date-content {
+  height: 3.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dates:hover .date-content:hover {
+  transform: scale(1.2);
+}
+
+.past-dates {
+  opacity: 0;
+  cursor: default;
+}
+
+.day-with-event-logo {
+  color: rgb(56, 56, 56);
+  height: 2.5rem;
+  text-align: center;
+}
+
+.day-date {
+  height: 1.25rem;
+  background-color: rgb(224, 224, 224);
+  text-align: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.dates-with-content {
+  background-color: #fed300;
+}
+
+.today {
+  background-color: rgb(238, 27, 27);
+  color: whitesmoke;
+  font-weight: bold;
+}
