@@ -1,30 +1,48 @@
-# React + TypeScript + Vite
+![header image](src/images/github-header-image.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<br>
+<br>
 
-Currently, two official plugins are available:
+# Introduction
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Web application with a schedule of past and upcoming events of the Oktagon MMA organization.
 
-## Expanding the ESLint configuration
+<br>
+<br>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+# Used technologies
 
-- Configure the top-level `parserOptions` property like this:
+<br>
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+![html badge](https://img.shields.io/badge/HTML-F15B29?style=for-the-badge)
+![css badge](https://img.shields.io/badge/CSS-1775BB?style=for-the-badge)
+![typescript badge](https://img.shields.io/badge/TYPESCRIPT-3178C6?style=for-the-badge)
+![react badge](https://img.shields.io/badge/REACT-00D8FF?style=for-the-badge&labelColor=black)
+![firebase badge](https://img.shields.io/badge/FIREBASE-FFCC32?style=for-the-badge)
+![date-fns badge](https://img.shields.io/badge/DATE--FNS-5A0130?style=for-the-badge)
+![vite badge](https://img.shields.io/badge/VITE-BA37FE?style=for-the-badge)
+![netlify badge](https://img.shields.io/badge/NETLIFY-00BEBB?style=for-the-badge)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+<br>
+<br>
+
+# Time spent
+
+<br>
+
+_**( this badge is linked to the original JS repo, which was later transformed into this TypeScript repo )**_
+
+[![wakatime](https://wakatime.com/badge/github/gaz647/oktagon-schedule.svg)](https://wakatime.com/badge/github/gaz647/oktagon-schedule)
+
+<br>
+<br>
+
+# Preview
+
+<br>
+
+![header image](src/images/fancy-narwhal-e5080d.netlify.app_1.png)
+
+<br>
+
+![header image](src/images/fancy-narwhal-e5080d.netlify.app_2.png)
