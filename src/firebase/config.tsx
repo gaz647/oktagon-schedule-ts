@@ -1,7 +1,7 @@
 // import firebase from "firebase/app";
 // import "firebase/firestore";
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "@firebase/firestore";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_REACT_APP_FIREBASE_API_KEY,
